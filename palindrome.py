@@ -1,4 +1,4 @@
-'''
+
 # THIS IS A PALINDROME FUNCTION
 def is_palindrome(s):
     if len(s)<=1:
@@ -8,8 +8,13 @@ def is_palindrome(s):
             return False
         else:
                 return is_palindrome((s[1:len(s)-1]))
-print(is_palindrome("level"))
-'''
+s=str(input("Enter a word: "))
+if(is_palindrome(s)==True):
+    print(s," is a palindrome")
+else:
+    print(s," is not palindrome")
+
+
 '''
 def palindrome_1(str1):
     word1=''
@@ -25,7 +30,7 @@ word1=input("enter a word\n")
 palindrome_1(word1)
 print(palindrome_1)
 '''
-
+'''
 #CHECK IF ODD OR EVEN NUMBER
 def check_num(n):
     if n<2:
@@ -36,3 +41,4 @@ if (check_num(n)==True):
     print("It is even")
 else:
     print("It's an odd")
+'''
