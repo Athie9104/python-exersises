@@ -1,14 +1,14 @@
+# THIS IS A PALINDROME FUNCTION
 def is_palindrome(s):
-    if len(s)<1:
+    if len(s)<=1:
         return True
     else:
-        if s[0]==s[-1]:
-            return is_palindrome(s[-1:1])
-        else:
+        if s[0]!=s[len(s)-1]:
             return False
-
-s=str(input("Input string: "))
-if (is_palindrome(s)==True):
-    print("Is palindrome")
+        else:
+                return is_palindrome((s[1:len(s)-1]))
+s=str(input("Enter a word: "))
+if(is_palindrome(s)==True):
+    print(s," is a palindrome")
 else:
-    print("It isn't a palindrome")
+    print(s," is not palindrome")

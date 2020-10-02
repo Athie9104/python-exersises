@@ -1,6 +1,7 @@
 
 # THIS IS A PALINDROME FUNCTION
 def is_palindrome(s):
+    s=str(s)
     if len(s)<=1:
         return True
     else:
