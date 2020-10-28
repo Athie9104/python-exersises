@@ -1,15 +1,18 @@
-def selection_sort_algo(items):
-    for step in range(len(items)):
-        #print(step)
-        #min = step====same as the line below
-        location_of_smallest = step
-        for location in range(step, len(items)):
-            if(items[location] < items[step]):
-                items[location] = items[step]
-                items[step] = items[location]
-        if(location_of_smallest != step):
-            items[step]
-
-    return items
-x=[3,2,1,7,8,9]
-print(selection_sort_algo(x))
+def search_(x, lst1):
+    low= 0
+    high= len(lst1)-1
+    while low <= high:
+        mid = (low + high)//2
+        item= lst1[mid]
+        if x == item:
+            return mid
+        elif x < item:
+             high = mid -1
+             return low
+        else:
+            low = mid + 1
+            return high
+    return -1
+list=[5,2,7,8,9,1,4,6,3]
+x=6
+print(search_(x, list))
